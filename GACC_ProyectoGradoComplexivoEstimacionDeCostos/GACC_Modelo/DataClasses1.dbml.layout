@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 27, 28.25" name="DataClasses1">
+  <DataContextMoniker Name="/DataClasses1DataContext" />
+  <nestedChildShapes>
+    <classShape Id="bab7ebd5-2b03-489c-941a-af20fba8e18f" absoluteBounds="14.75, 9.25, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_TblActividad" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f3942440-2133-484b-b187-304f138cb8a3" absoluteBounds="14.765, 9.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1ff30eb8-f7e4-41f1-b9a0-2045087af800" absoluteBounds="3.75, 12.375, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_TblCargo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cf82fe63-7c89-4415-80dd-ca388015ed77" absoluteBounds="3.765, 12.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0e748de6-f35c-4aac-80ef-ce9d5b0f2be5" absoluteBounds="6.5, 13.25, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_TblCostoIndirecto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="97743588-30fd-4ecc-9aae-d13ccbf2133a" absoluteBounds="6.515, 13.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="32b2daca-0bf9-4bfa-9a4f-d1c3c9ec4f71" absoluteBounds="0.75, 9, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_TblEmpresa" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ced1fbd4-e6fd-48c5-b0f6-f797d8e8f561" absoluteBounds="0.765, 9.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="710f547c-1593-4ce3-a7f4-fd14e55af0c8" absoluteBounds="12, 10.125, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_TblFaseDeDesarrollo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4043d157-bab3-4e35-b6fc-fa5e42e486f6" absoluteBounds="12.015, 10.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b161a390-b9d8-4964-b395-fd24169d547c" absoluteBounds="9.25, 12.25, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_TblMetodologia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4e06463c-b7cd-4fb6-846e-59820cc5b3ae" absoluteBounds="9.265, 12.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e8a3f0bb-71ff-420d-b8ec-535a0485f3bf" absoluteBounds="3.5, 9.25, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_TblNombreProyecto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a04b4828-4ab0-4212-8875-d6a6c5b4fea1" absoluteBounds="3.515, 9.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e4c9f0ea-1eee-4206-ad91-90ff84a171f6" absoluteBounds="6.5, 8, 2, 4.2708154296874987">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_TblPersona" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ccb68de3-3a72-4028-bee6-a03af8508a22" absoluteBounds="6.515, 8.46, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ede6f8e1-aa11-4dba-8171-497b92f4b50c" absoluteBounds="6.25, 1.875, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_TblProyecto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d0e508af-72e4-40a2-81f7-7b5f7594118a" absoluteBounds="6.265, 2.335, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1c17775d-5d6f-4237-a273-d7a60eeb1df3" absoluteBounds="9.25, 9.375, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_TblProyectoTblCostoIndirecto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="79e0dab3-7162-44da-b3d7-d5261acde7ec" absoluteBounds="9.265, 9.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="50f1b777-998d-4c12-8ac9-4bdfa24da67b" absoluteBounds="9.25, 6.375, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_TblProyectoTblPersona" />
+      <nestedChildShapes>
+        <elementListCompartment Id="46181f44-be42-4ad9-86ec-2a049e530c95" absoluteBounds="9.265, 6.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b37acf44-0400-41a8-89f8-1b11102133d2" absoluteBounds="17.5, 8.875, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_TblTarea" />
+      <nestedChildShapes>
+        <elementListCompartment Id="964e377a-ebe5-41c9-9922-f46ba78b29e1" absoluteBounds="17.515, 9.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14 : 10.5729484049479); (14.75 : 10.5729484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/GACC_TblFaseDeDesarrollo/GACC_TblFaseDeDesarrollo_GACC_TblActividad" />
+      <nodes>
+        <classShapeMoniker Id="710f547c-1593-4ce3-a7f4-fd14e55af0c8" />
+        <classShapeMoniker Id="bab7ebd5-2b03-489c-941a-af20fba8e18f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 12.46875); (12.34375 : 12.46875); (12.34375 : 11.8958968098958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/GACC_TblMetodologia/GACC_TblMetodologia_GACC_TblFaseDeDesarrollo" />
+      <nodes>
+        <classShapeMoniker Id="b161a390-b9d8-4964-b395-fd24169d547c" />
+        <classShapeMoniker Id="710f547c-1593-4ce3-a7f4-fd14e55af0c8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 10.1354484049479); (6.25 : 10.1354484049479); (6.25 : 12.5208154296875); (8.66666666666667 : 12.5208154296875 : JumpStart); (8.95833333333333 : 12.5208154296875 : JumpEnd); (9 : 12.5208154296875); (9 : 11.0112939453125); (10.25 : 11.0112939453125); (10.25 : 12.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/GACC_TblNombreProyecto/GACC_TblNombreProyecto_GACC_TblMetodologia" />
+      <nodes>
+        <classShapeMoniker Id="e8a3f0bb-71ff-420d-b8ec-535a0485f3bf" />
+        <classShapeMoniker Id="b161a390-b9d8-4964-b395-fd24169d547c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 10.1354484049479); (3.5 : 10.1354484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/GACC_TblEmpresa/GACC_TblEmpresa_GACC_TblNombreProyecto" />
+      <nodes>
+        <classShapeMoniker Id="32b2daca-0bf9-4bfa-9a4f-d1c3c9ec4f71" />
+        <classShapeMoniker Id="e8a3f0bb-71ff-420d-b8ec-535a0485f3bf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 9.28125); (8.79166666666667 : 9.28125 : JumpStart); (8.95833333333333 : 9.28125 : JumpEnd); (14.75 : 9.28125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/GACC_TblPersona/GACC_TblPersona_GACC_TblActividad" />
+      <nodes>
+        <classShapeMoniker Id="e4c9f0ea-1eee-4206-ad91-90ff84a171f6" />
+        <classShapeMoniker Id="bab7ebd5-2b03-489c-941a-af20fba8e18f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 11.5160953776042); (8.85416666666667 : 11.5160953776042 : JumpStart); (9.08333333333333 : 11.5160953776042 : JumpEnd); (10.1666666666667 : 11.5160953776042 : JumpStart); (10.3333333333333 : 11.5160953776042 : JumpEnd); (12 : 11.5160953776042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/GACC_TblPersona/GACC_TblPersona_GACC_TblFaseDeDesarrollo" />
+      <nodes>
+        <classShapeMoniker Id="e4c9f0ea-1eee-4206-ad91-90ff84a171f6" />
+        <classShapeMoniker Id="710f547c-1593-4ce3-a7f4-fd14e55af0c8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 12.2708154296875); (8.875 : 12.6458154296875); (8.875 : 11.875); (8.87857443490112 : 11.8785744349011 : JumpStart); (9.05892556509888 : 12.0589255650989 : JumpEnd); (9.25 : 12.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClasses1DataContext/GACC_TblPersona/GACC_TblPersona_GACC_TblMetodologia" />
+      <nodes>
+        <classShapeMoniker Id="e4c9f0ea-1eee-4206-ad91-90ff84a171f6" />
+        <classShapeMoniker Id="b161a390-b9d8-4964-b395-fd24169d547c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.5 : 9.63022420247396); (5.5 : 9.63022420247396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/GACC_TblPersona/GACC_TblPersona_GACC_TblNombreProyecto" />
+      <nodes>
+        <classShapeMoniker Id="e4c9f0ea-1eee-4206-ad91-90ff84a171f6" />
+        <classShapeMoniker Id="e8a3f0bb-71ff-420d-b8ec-535a0485f3bf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 9.09375); (3.88541416666667 : 9.09375 : JumpStart); (4.05208083333333 : 9.09375 : JumpEnd); (4.41666666666667 : 9.09375 : JumpStart); (4.58333333333333 : 9.09375 : JumpEnd); (4.94791866666667 : 9.09375 : JumpStart); (5.11458533333333 : 9.09375 : JumpEnd); (6.5 : 9.09375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/GACC_TblEmpresa/GACC_TblEmpresa_GACC_TblPersona" />
+      <nodes>
+        <classShapeMoniker Id="32b2daca-0bf9-4bfa-9a4f-d1c3c9ec4f71" />
+        <classShapeMoniker Id="e4c9f0ea-1eee-4206-ad91-90ff84a171f6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.65625 : 12.375); (5.65625 : 11.6771061197917); (6.16666666666667 : 11.6771061197917 : JumpStart); (6.33333333333333 : 11.6771061197917 : JumpEnd); (6.5 : 11.6771061197917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/GACC_TblCargo/GACC_TblCargo_GACC_TblPersona" />
+      <nodes>
+        <classShapeMoniker Id="1ff30eb8-f7e4-41f1-b9a0-2045087af800" />
+        <classShapeMoniker Id="e4c9f0ea-1eee-4206-ad91-90ff84a171f6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 9.00153746153846); (3.125 : 8.62653746153846); (3.125 : 3.53304307324219); (6.25 : 3.53304307324219)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/GACC_TblEmpresa/GACC_TblEmpresa_GACC_TblProyecto" />
+      <nodes>
+        <classShapeMoniker Id="32b2daca-0bf9-4bfa-9a4f-d1c3c9ec4f71" />
+        <classShapeMoniker Id="ede6f8e1-aa11-4dba-8171-497b92f4b50c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 9.25); (4.5 : 5.25359014648438); (6.25 : 5.25359014648438)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/GACC_TblNombreProyecto/GACC_TblNombreProyecto_GACC_TblProyecto" />
+      <nodes>
+        <classShapeMoniker Id="e8a3f0bb-71ff-420d-b8ec-535a0485f3bf" />
+        <classShapeMoniker Id="ede6f8e1-aa11-4dba-8171-497b92f4b50c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 13.3112992741887); (8.9375 : 12.8737992741887); (8.9375 : 10.0681469726562); (9.25 : 10.0681469726562)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/GACC_TblCostoIndirecto/GACC_TblCostoIndirecto_GACC_TblProyectoTblCostoIndirecto" />
+      <nodes>
+        <classShapeMoniker Id="0e748de6-f35c-4aac-80ef-ce9d5b0f2be5" />
+        <classShapeMoniker Id="1c17775d-5d6f-4237-a273-d7a60eeb1df3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.031252 : 9.25); (5.031252 : 7.75); (7.41666666666667 : 7.75 : JumpStart); (7.58333333333333 : 7.75 : JumpEnd); (8.875 : 7.75); (8.875 : 9.69032148632812); (9.25 : 9.69032148632812)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/GACC_TblNombreProyecto/GACC_TblNombreProyecto_GACC_TblProyectoTblCostoIndirecto" />
+      <nodes>
+        <classShapeMoniker Id="e8a3f0bb-71ff-420d-b8ec-535a0485f3bf" />
+        <classShapeMoniker Id="1c17775d-5d6f-4237-a273-d7a60eeb1df3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.5 : 8); (7.5 : 7.0625); (9.25 : 7.0625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/GACC_TblPersona/GACC_TblPersona_GACC_TblProyectoTblPersona" />
+      <nodes>
+        <classShapeMoniker Id="e4c9f0ea-1eee-4206-ad91-90ff84a171f6" />
+        <classShapeMoniker Id="50f1b777-998d-4c12-8ac9-4bdfa24da67b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.9687475 : 9.25); (3.9687475 : 7.4375025); (4.41666666666667 : 7.4375025 : JumpStart); (4.58333333333333 : 7.4375025 : JumpEnd); (7.41666666666667 : 7.4375025 : JumpStart); (7.58333333333333 : 7.4375025 : JumpEnd); (9.25 : 7.4375025)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/GACC_TblNombreProyecto/GACC_TblNombreProyecto_GACC_TblProyectoTblPersona" />
+      <nodes>
+        <classShapeMoniker Id="e8a3f0bb-71ff-420d-b8ec-535a0485f3bf" />
+        <classShapeMoniker Id="50f1b777-998d-4c12-8ac9-4bdfa24da67b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.75 : 10.1354484049479); (17.5 : 10.1354484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/GACC_TblActividad/GACC_TblActividad_GACC_TblTarea" />
+      <nodes>
+        <classShapeMoniker Id="bab7ebd5-2b03-489c-941a-af20fba8e18f" />
+        <classShapeMoniker Id="b37acf44-0400-41a8-89f8-1b11102133d2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 9.015625); (8.79166666666667 : 9.015625 : JumpStart); (8.95833333333333 : 9.015625 : JumpEnd); (17.5 : 9.015625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/GACC_TblPersona/GACC_TblPersona_GACC_TblTarea" />
+      <nodes>
+        <classShapeMoniker Id="e4c9f0ea-1eee-4206-ad91-90ff84a171f6" />
+        <classShapeMoniker Id="b37acf44-0400-41a8-89f8-1b11102133d2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e83256b3-5f2a-4eb3-b910-dea066b32d67" absoluteBounds="0.75, 0.75, 2, 4.0785139973958326">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewActividadTarea" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5f462a0d-5826-4b58-b625-ccec673de4ce" absoluteBounds="0.765, 1.21, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8d97a0c6-04a9-4b9a-84bd-149ea4a44539" absoluteBounds="12.75, 0.75, 2, 6.5784326171874987">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewActividadTarea2" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bf06d919-d8c5-43bb-a9e6-63fb4e785c04" absoluteBounds="12.765, 1.21, 1.9700000000000002, 6.0184326171875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1a8f9ea7-4f38-4e53-9bcb-b47583268f3f" absoluteBounds="0.75, 12.75, 2, 4.0785139973958309">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewActividadTareaUsuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ba3b08f0-34ca-4b20-9ea7-178fcab5e111" absoluteBounds="0.765, 13.21, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="724aac8c-171f-4aa7-b0e5-1716790d772a" absoluteBounds="12.75, 12.75, 2, 4.0785139973958309">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewActividadTareaUsuario3" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4d4c3f59-1d10-4e0d-9b14-8e87a9259697" absoluteBounds="12.765, 13.21, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8ca503c2-13cb-41d5-9f9a-9a19c8bdfdc3" absoluteBounds="15.75, 0.75, 2, 4.0785139973958326">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewActividadTareaUsuario4" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd4c0e9c-3f93-4d85-9593-8abebefcf3e7" absoluteBounds="15.765, 1.21, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7ec80f71-3d91-40e0-bee0-f58cd62a79ac" absoluteBounds="15.75, 12.75, 2, 4.0785139973958309">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewCosto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="37b468f4-6fa0-48b5-82ea-6b047000d01d" absoluteBounds="15.765, 13.21, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5928f4f9-7821-47b8-a6e7-b6e0119d1203" absoluteBounds="0.75, 5.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewEmpresaNombreUsuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2aee3e3b-3b5a-459f-b1db-df6b29a08c05" absoluteBounds="0.765, 6.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9c2ee352-4ef4-4ce1-a28a-98ee8ff0ed69" absoluteBounds="3.75, 16.75, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewFaseActividad" />
+      <nestedChildShapes>
+        <elementListCompartment Id="df1189fd-a7bb-419f-a5eb-9972bb517ed9" absoluteBounds="3.765, 17.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="726bcf4b-4edb-4f08-af66-12079bc6a03b" absoluteBounds="6.75, 16.75, 2, 4.6554182942708309">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewFaseActividad2" />
+      <nestedChildShapes>
+        <elementListCompartment Id="62cb4e34-91a1-4b58-ae18-892c8bb8ff79" absoluteBounds="6.765, 17.21, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1064246d-f553-44e2-b93c-855cd7e506fd" absoluteBounds="9.75, 17.75, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewFaseActividad3" />
+      <nestedChildShapes>
+        <elementListCompartment Id="262d6093-aff7-4438-b8cb-149bcdbd8345" absoluteBounds="9.765, 18.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c6c545a3-f2c3-4e3e-a6c2-73fff3c812ce" absoluteBounds="12.75, 17.75, 2, 4.0785139973958309">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewFaseActividadTarea" />
+      <nestedChildShapes>
+        <elementListCompartment Id="855b5917-f861-44fe-ad9c-e7ce3918643d" absoluteBounds="12.765, 18.21, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4c90491e-4628-490b-be95-be530c1acc48" absoluteBounds="15.75, 17.75, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewFaseActividadUsuarioUsuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="90a66212-1ebc-482b-bb0d-b679007fc169" absoluteBounds="15.765, 18.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7752fad7-4e73-4e95-a636-d3deb41c1a6b" absoluteBounds="18.75, 0.75, 2, 3.1170068359375005">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewFaseActividadUsuarioUsuario2" />
+      <nestedChildShapes>
+        <elementListCompartment Id="359dfb2f-b8a4-45bd-81ce-a9a99b1cde24" absoluteBounds="18.765, 1.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="52fd67e4-f33c-4b49-9bdc-88ea3f9fb9f8" absoluteBounds="18.75, 4.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewMetodologiaFase" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bb165963-9452-481c-87cd-c640a34bcf1a" absoluteBounds="18.765, 5.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0b429a5f-bbe8-478e-899d-4f542d0ecac7" absoluteBounds="18.75, 12.75, 2, 4.2708154296874987">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewMetodologiaFase2" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2b106312-92d6-49a2-bfd9-71594cf7ee33" absoluteBounds="18.765, 13.21, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4147c79b-5d57-4d12-8d4a-0970d95a13e3" absoluteBounds="18.75, 18.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewMetodologiaFaseUsuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="88defeed-36a1-4f4d-aeb8-9bf85eec73ea" absoluteBounds="18.765, 19.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="06393e13-8ef4-4727-a0b7-ed7192e822a2" absoluteBounds="0.75, 20.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewMetodologiaFaseUsuario2" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ef96835e-7efa-4ab9-878a-e15f2bf3b954" absoluteBounds="0.765, 21.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6cc99d03-b51c-4d43-906c-9f97434d3bad" absoluteBounds="20.75, 8.75, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewMetodologiaPersonaNombreProy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3d2e2f44-dbc7-4e49-8a1e-da2dd83492b4" absoluteBounds="20.765, 9.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d2023bfa-1366-4337-a52e-b434a276aba0" absoluteBounds="21.75, 0.75, 2, 4.2708154296874987">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewMetodologiaPersonaNombreProy2" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1820a1b6-70a8-4738-a7af-0abe48580d40" absoluteBounds="21.765, 1.21, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="486d6951-9d43-49a5-a443-ee5171884092" absoluteBounds="21.75, 12.75, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewMetodologiaPersonaNombreProy3" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8feca9ba-5423-409f-8485-6a3d2d1dfd41" absoluteBounds="21.765, 13.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4ffd9762-d832-4bd5-9860-2571f3cecb66" absoluteBounds="21.75, 16.75, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewMetodologiaPersonaUsuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="517261ef-c614-4b95-af65-86169226f0f2" absoluteBounds="21.765, 17.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="75f1f55b-99f0-4a2e-ad30-b8f5eb4ffe8f" absoluteBounds="21.75, 20.75, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewNombreProyectoEmpresa" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0813f2e1-3748-4938-98a3-83205a2780ce" absoluteBounds="21.765, 21.21, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="571ac89c-8d74-49f0-972c-4519bb66d681" absoluteBounds="3.75, 22.75, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewNombreProyectoEmpresaUsuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8ce392b7-4bc8-4c3b-9c5b-67b03e79047e" absoluteBounds="3.765, 23.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c7e3fa54-e5e5-482f-aeab-bbebda0b7f3d" absoluteBounds="6.75, 22.75, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewNombreProyectoListar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="20a3a3f8-ddb3-4012-957b-c42d58ab3cb3" absoluteBounds="6.765, 23.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dbd4fb63-d5e2-4787-8644-5210eb8b8163" absoluteBounds="9.75, 22.75, 2, 3.6939111328125023">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewPersona" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ebb5d480-7a20-4a97-86f7-3b253a66880f" absoluteBounds="9.765, 23.21, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8e334f5c-ab0e-470d-873c-84479a97b14f" absoluteBounds="12.75, 22.75, 2, 3.6939111328125023">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewPersonaCargoEmpresa" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1b5154c6-9493-4cae-b0a6-87bc2aba6a35" absoluteBounds="12.765, 23.21, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="47888b2c-3521-4b0c-af14-15302b0e428a" absoluteBounds="15.75, 22.75, 2, 5.2323225911458309">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewPersonaCargoEmpresa2" />
+      <nestedChildShapes>
+        <elementListCompartment Id="885df578-373b-48ba-ad85-ee450af6e4ad" absoluteBounds="15.765, 23.21, 1.9700000000000002, 4.672322591145833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7c0de5a4-3edd-42ba-ac2f-7536d129e613" absoluteBounds="23.75, 6.75, 2, 3.1170068359375014">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewPersonaProyecto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9d25379a-4a64-4d06-8d7a-f89c2526fa84" absoluteBounds="23.765, 7.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ea91412a-44fb-404f-9041-2d841a8c4483" absoluteBounds="24.75, 0.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewProyectoCosto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1c4e970b-c153-4e17-a20b-f0b169846267" absoluteBounds="24.765, 1.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f3182db8-945d-4ed0-99f5-d2238a9b05fe" absoluteBounds="24.75, 10.75, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewTablaProyecto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="62690c0a-3de9-4fda-9876-388b9254a533" absoluteBounds="24.765, 11.21, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7962bf95-591f-4c55-aa3e-32576f853b9d" absoluteBounds="24.75, 16.75, 2, 4.8477197265625023">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewTablaProyecto2" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8f51bea1-8dd0-4860-8bb6-2b6c38350983" absoluteBounds="24.765, 17.21, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8b6b7bdb-b9c2-4d1f-a72f-15483b96baa4" absoluteBounds="24.75, 22.75, 2, 5.2323225911458309">
+      <DataClassMoniker Name="/DataClasses1DataContext/GACC_ViewTablaProyecto3" />
+      <nestedChildShapes>
+        <elementListCompartment Id="09f0786a-a5b8-472e-9684-210d3ed1935e" absoluteBounds="24.765, 23.21, 1.9700000000000002, 4.672322591145833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

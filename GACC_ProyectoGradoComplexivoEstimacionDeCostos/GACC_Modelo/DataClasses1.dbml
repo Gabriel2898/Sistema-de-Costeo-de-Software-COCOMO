@@ -1,0 +1,763 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GACC_ComplexivoEstimacionDeCostos" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-GV5PGTP\SQLEXPRESS;Initial Catalog=GACC_ComplexivoEstimacionDeCostos;Integrated Security=True" SettingsObjectName="GACC_Modelo.Properties.Settings" SettingsPropertyName="GACC_ComplexivoEstimacionDeCostosConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.GACC_TblActividad" Member="GACC_TblActividad">
+    <Type Name="GACC_TblActividad">
+      <Column Name="gacc_ActId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="gacc_CodFasId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CodPerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ActNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ActEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Association Name="GACC_TblActividad_GACC_TblTarea" Member="GACC_TblTarea" ThisKey="gacc_ActId" OtherKey="gacc_CodActId" Type="GACC_TblTarea" />
+      <Association Name="GACC_TblFaseDeDesarrollo_GACC_TblActividad" Member="GACC_TblFaseDeDesarrollo" ThisKey="gacc_CodFasId" OtherKey="gacc_FasId" Type="GACC_TblFaseDeDesarrollo" IsForeignKey="true" />
+      <Association Name="GACC_TblPersona_GACC_TblActividad" Member="GACC_TblPersona" ThisKey="gacc_CodPerId" OtherKey="gacc_PerId" Type="GACC_TblPersona" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_TblCargo" Member="GACC_TblCargo">
+    <Type Name="GACC_TblCargo">
+      <Column Name="gacc_CarId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="gacc_CarNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CarEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Association Name="GACC_TblCargo_GACC_TblPersona" Member="GACC_TblPersona" ThisKey="gacc_CarId" OtherKey="gacc_CodCarId" Type="GACC_TblPersona" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_TblCostoIndirecto" Member="GACC_TblCostoIndirecto">
+    <Type Name="GACC_TblCostoIndirecto">
+      <Column Name="gacc_CostId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="gacc_CostNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CostValor" Type="System.Decimal" DbType="Decimal(8,2) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CostNombreProyectoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CostEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Association Name="GACC_TblCostoIndirecto_GACC_TblProyectoTblCostoIndirecto" Member="GACC_TblProyectoTblCostoIndirecto" ThisKey="gacc_CostId" OtherKey="gacc_CodCostId" Type="GACC_TblProyectoTblCostoIndirecto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_TblEmpresa" Member="GACC_TblEmpresa">
+    <Type Name="GACC_TblEmpresa">
+      <Column Name="gacc_EmpId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="gacc_EmpRuc" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpDireccion" Type="System.String" DbType="VarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpTelefono" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpCorreo" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Association Name="GACC_TblEmpresa_GACC_TblNombreProyecto" Member="GACC_TblNombreProyecto" ThisKey="gacc_EmpId" OtherKey="gacc_CodEmpId" Type="GACC_TblNombreProyecto" />
+      <Association Name="GACC_TblEmpresa_GACC_TblPersona" Member="GACC_TblPersona" ThisKey="gacc_EmpId" OtherKey="gacc_CodEmpId" Type="GACC_TblPersona" />
+      <Association Name="GACC_TblEmpresa_GACC_TblProyecto" Member="GACC_TblProyecto" ThisKey="gacc_EmpId" OtherKey="gacc_CodEmpId" Type="GACC_TblProyecto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_TblFaseDeDesarrollo" Member="GACC_TblFaseDeDesarrollo">
+    <Type Name="GACC_TblFaseDeDesarrollo">
+      <Column Name="gacc_FasId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="gacc_CodMetId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CodPerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_FasNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_FasEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Association Name="GACC_TblFaseDeDesarrollo_GACC_TblActividad" Member="GACC_TblActividad" ThisKey="gacc_FasId" OtherKey="gacc_CodFasId" Type="GACC_TblActividad" />
+      <Association Name="GACC_TblMetodologia_GACC_TblFaseDeDesarrollo" Member="GACC_TblMetodologia" ThisKey="gacc_CodMetId" OtherKey="gacc_MetId" Type="GACC_TblMetodologia" IsForeignKey="true" />
+      <Association Name="GACC_TblPersona_GACC_TblFaseDeDesarrollo" Member="GACC_TblPersona" ThisKey="gacc_CodPerId" OtherKey="gacc_PerId" Type="GACC_TblPersona" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_TblMetodologia" Member="GACC_TblMetodologia">
+    <Type Name="GACC_TblMetodologia">
+      <Column Name="gacc_MetId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="gacc_CodNompId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_MetNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CodPerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_MetEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Association Name="GACC_TblMetodologia_GACC_TblFaseDeDesarrollo" Member="GACC_TblFaseDeDesarrollo" ThisKey="gacc_MetId" OtherKey="gacc_CodMetId" Type="GACC_TblFaseDeDesarrollo" />
+      <Association Name="GACC_TblNombreProyecto_GACC_TblMetodologia" Member="GACC_TblNombreProyecto" ThisKey="gacc_CodNompId" OtherKey="gacc_NompId" Type="GACC_TblNombreProyecto" IsForeignKey="true" />
+      <Association Name="GACC_TblPersona_GACC_TblMetodologia" Member="GACC_TblPersona" ThisKey="gacc_CodPerId" OtherKey="gacc_PerId" Type="GACC_TblPersona" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_TblNombreProyecto" Member="GACC_TblNombreProyecto">
+    <Type Name="GACC_TblNombreProyecto">
+      <Column Name="gacc_NompId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="gacc_CodEmpId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CodPerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Association Name="GACC_TblNombreProyecto_GACC_TblMetodologia" Member="GACC_TblMetodologia" ThisKey="gacc_NompId" OtherKey="gacc_CodNompId" Type="GACC_TblMetodologia" />
+      <Association Name="GACC_TblNombreProyecto_GACC_TblProyecto" Member="GACC_TblProyecto" ThisKey="gacc_NompId" OtherKey="gacc_CodNompId" Type="GACC_TblProyecto" />
+      <Association Name="GACC_TblNombreProyecto_GACC_TblProyectoTblCostoIndirecto" Member="GACC_TblProyectoTblCostoIndirecto" ThisKey="gacc_NompId" OtherKey="gacc_CodNompId" Type="GACC_TblProyectoTblCostoIndirecto" />
+      <Association Name="GACC_TblNombreProyecto_GACC_TblProyectoTblPersona" Member="GACC_TblProyectoTblPersona" ThisKey="gacc_NompId" OtherKey="gacc_CodNompId" Type="GACC_TblProyectoTblPersona" />
+      <Association Name="GACC_TblEmpresa_GACC_TblNombreProyecto" Member="GACC_TblEmpresa" ThisKey="gacc_CodEmpId" OtherKey="gacc_EmpId" Type="GACC_TblEmpresa" IsForeignKey="true" />
+      <Association Name="GACC_TblPersona_GACC_TblNombreProyecto" Member="GACC_TblPersona" ThisKey="gacc_CodPerId" OtherKey="gacc_PerId" Type="GACC_TblPersona" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_TblPersona" Member="GACC_TblPersona">
+    <Type Name="GACC_TblPersona">
+      <Column Name="gacc_PerId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="gacc_PerUsuarioNombre" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerPassword" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerDni" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerPrimerNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerSegundoNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerPrimerApellido" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerSegundoApellido" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="gacc_PerGenero" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CodEmpId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CodCarId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerEspecialidad" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerExperiencia" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerSalario" Type="System.Decimal" DbType="Decimal(8,2) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerDireccion" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerTelefono" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerCorreo" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Association Name="GACC_TblPersona_GACC_TblActividad" Member="GACC_TblActividad" ThisKey="gacc_PerId" OtherKey="gacc_CodPerId" Type="GACC_TblActividad" />
+      <Association Name="GACC_TblPersona_GACC_TblFaseDeDesarrollo" Member="GACC_TblFaseDeDesarrollo" ThisKey="gacc_PerId" OtherKey="gacc_CodPerId" Type="GACC_TblFaseDeDesarrollo" />
+      <Association Name="GACC_TblPersona_GACC_TblMetodologia" Member="GACC_TblMetodologia" ThisKey="gacc_PerId" OtherKey="gacc_CodPerId" Type="GACC_TblMetodologia" />
+      <Association Name="GACC_TblPersona_GACC_TblNombreProyecto" Member="GACC_TblNombreProyecto" ThisKey="gacc_PerId" OtherKey="gacc_CodPerId" Type="GACC_TblNombreProyecto" />
+      <Association Name="GACC_TblPersona_GACC_TblProyectoTblPersona" Member="GACC_TblProyectoTblPersona" ThisKey="gacc_PerId" OtherKey="gacc_CodPerId" Type="GACC_TblProyectoTblPersona" />
+      <Association Name="GACC_TblPersona_GACC_TblTarea" Member="GACC_TblTarea" ThisKey="gacc_PerId" OtherKey="gacc_CodPerId" Type="GACC_TblTarea" />
+      <Association Name="GACC_TblEmpresa_GACC_TblPersona" Member="GACC_TblEmpresa" ThisKey="gacc_CodEmpId" OtherKey="gacc_EmpId" Type="GACC_TblEmpresa" IsForeignKey="true" />
+      <Association Name="GACC_TblCargo_GACC_TblPersona" Member="GACC_TblCargo" ThisKey="gacc_CodCarId" OtherKey="gacc_CarId" Type="GACC_TblCargo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_TblProyecto" Member="GACC_TblProyecto">
+    <Type Name="GACC_TblProyecto">
+      <Column Name="gacc_ProId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="gacc_CodEmpId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CodNompId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProLineasCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProLineaCodigoExistente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProLenguaje" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProGestorBaseDatos" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProTipoProyecto" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProModeloProyecto" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProEsfuerzoNominal" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProEsfuerzoAjustado" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProTiempo" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProFechaInicio" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProFechaFin" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProCostoTrabajadores" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="gacc_ProCostoCostoIndirectos" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="gacc_ProCostoTotal" Type="System.Decimal" DbType="Decimal(20,2)" CanBeNull="true" />
+      <Column Name="gacc_ProNumeroPersonas" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Association Name="GACC_TblEmpresa_GACC_TblProyecto" Member="GACC_TblEmpresa" ThisKey="gacc_CodEmpId" OtherKey="gacc_EmpId" Type="GACC_TblEmpresa" IsForeignKey="true" />
+      <Association Name="GACC_TblNombreProyecto_GACC_TblProyecto" Member="GACC_TblNombreProyecto" ThisKey="gacc_CodNompId" OtherKey="gacc_NompId" Type="GACC_TblNombreProyecto" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_TblProyectoTblCostoIndirecto" Member="GACC_TblProyectoTblCostoIndirecto">
+    <Type Name="GACC_TblProyectoTblCostoIndirecto">
+      <Column Name="gacc_ProCostId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="gacc_CodCostId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="gacc_CodNompId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="GACC_TblCostoIndirecto_GACC_TblProyectoTblCostoIndirecto" Member="GACC_TblCostoIndirecto" ThisKey="gacc_CodCostId" OtherKey="gacc_CostId" Type="GACC_TblCostoIndirecto" IsForeignKey="true" />
+      <Association Name="GACC_TblNombreProyecto_GACC_TblProyectoTblCostoIndirecto" Member="GACC_TblNombreProyecto" ThisKey="gacc_CodNompId" OtherKey="gacc_NompId" Type="GACC_TblNombreProyecto" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_TblProyectoTblPersona" Member="GACC_TblProyectoTblPersona">
+    <Type Name="GACC_TblProyectoTblPersona">
+      <Column Name="gacc_ProPerId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="gacc_CodPerId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="gacc_CodNompId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="GACC_TblPersona_GACC_TblProyectoTblPersona" Member="GACC_TblPersona" ThisKey="gacc_CodPerId" OtherKey="gacc_PerId" Type="GACC_TblPersona" IsForeignKey="true" />
+      <Association Name="GACC_TblNombreProyecto_GACC_TblProyectoTblPersona" Member="GACC_TblNombreProyecto" ThisKey="gacc_CodNompId" OtherKey="gacc_NompId" Type="GACC_TblNombreProyecto" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_TblTarea" Member="GACC_TblTarea">
+    <Type Name="GACC_TblTarea">
+      <Column Name="gacc_TarId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="gacc_CodActId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CodPerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_TarNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_TarLineaCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_TarFechaInicio" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_TarFechaFin" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_TarEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Association Name="GACC_TblActividad_GACC_TblTarea" Member="GACC_TblActividad" ThisKey="gacc_CodActId" OtherKey="gacc_ActId" Type="GACC_TblActividad" IsForeignKey="true" />
+      <Association Name="GACC_TblPersona_GACC_TblTarea" Member="GACC_TblPersona" ThisKey="gacc_CodPerId" OtherKey="gacc_PerId" Type="GACC_TblPersona" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewActividadTarea" Member="GACC_ViewActividadTarea">
+    <Type Name="GACC_ViewActividadTarea">
+      <Column Name="gacc_TarId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombres_Completos" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_MetNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Metodologia" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_FasNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Fase" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_ActNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Actividad" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_TarNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_TarLineaCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Tarea" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_PerEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_TarFechaInicio" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_TarFechaFin" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_TarEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewActividadTarea2" Member="GACC_ViewActividadTarea2">
+    <Type Name="GACC_ViewActividadTarea2">
+      <Column Name="gacc_EmpId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombres_Completos" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_MetId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_MetNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_MetEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Metodologia" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_FasId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_FasEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_FasNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Fase" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_ActId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ActNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ActEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Actividad" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_TarId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_TarNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_TarLineaCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Tarea" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_TarFechaInicio" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_TarFechaFin" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_TarEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CodCarId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerEspecialidad" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewActividadTareaUsuario" Member="GACC_ViewActividadTareaUsuario">
+    <Type Name="GACC_ViewActividadTareaUsuario">
+      <Column Name="gacc_TarId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombres_Completos" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_MetNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Metodologia" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_PerUsuarioNombre" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_FasNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Fase" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_ActNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Actividad" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_TarNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_TarLineaCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Tarea" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_TarFechaInicio" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_TarFechaFin" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_TarEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewActividadTareaUsuario3" Member="GACC_ViewActividadTareaUsuario3">
+    <Type Name="GACC_ViewActividadTareaUsuario3">
+      <Column Name="gacc_TarId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombres_Completos" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_MetNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Metodologia" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_FasNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Fase" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_ActNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Actividad" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_TarNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_TarLineaCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Tarea" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_PerUsuarioNombre" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_TarFechaInicio" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_TarFechaFin" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_TarEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewActividadTareaUsuario4" Member="GACC_ViewActividadTareaUsuario4">
+    <Type Name="GACC_ViewActividadTareaUsuario4">
+      <Column Name="gacc_TarId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombres_Completos" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_MetNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Metodologia" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_FasNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Fase" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_ActNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Actividad" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_PerUsuarioNombre" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_TarNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_TarLineaCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Tarea" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_TarFechaInicio" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_TarFechaFin" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_TarEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewCosto" Member="GACC_ViewCosto">
+    <Type Name="GACC_ViewCosto">
+      <Column Name="gacc_CostId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CostNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CostValor" Type="System.Decimal" DbType="Decimal(8,2) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CostNombreProyectoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CostEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CodEmpId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CodPerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpRuc" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpDireccion" Type="System.String" DbType="VarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpTelefono" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpCorreo" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewEmpresaNombreUsuario" Member="GACC_ViewEmpresaNombreUsuario">
+    <Type Name="GACC_ViewEmpresaNombreUsuario">
+      <Column Name="gacc_EmpId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerUsuarioNombre" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewFaseActividad" Member="GACC_ViewFaseActividad">
+    <Type Name="GACC_ViewFaseActividad">
+      <Column Name="gacc_ActId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombres_Completos" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_MetNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Metodologia" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_FasNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Fase" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_ActNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Actividad" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_PerEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ActEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewFaseActividad2" Member="GACC_ViewFaseActividad2">
+    <Type Name="GACC_ViewFaseActividad2">
+      <Column Name="gacc_EmpId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombres_Completos" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_MetId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_MetNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_MetEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_FasId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_FasNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_FasEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ActId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ActNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ActEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CodCarId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="idpersona" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewFaseActividad3" Member="GACC_ViewFaseActividad3">
+    <Type Name="GACC_ViewFaseActividad3">
+      <Column Name="gacc_ActId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombres_Completos" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_MetNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Metodologia" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_FasNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Fase" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_ActNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Actividad" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_PerUsuarioNombre" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ActEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewFaseActividadTarea" Member="GACC_ViewFaseActividadTarea">
+    <Type Name="GACC_ViewFaseActividadTarea">
+      <Column Name="gacc_TarId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombres_Completos" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_MetNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Metodologia" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_FasNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Fase" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_PerUsuarioNombre" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ActNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Actividad" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_TarNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_TarLineaCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Tarea" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_TarFechaInicio" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_TarFechaFin" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_TarEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewFaseActividadUsuarioUsuario" Member="GACC_ViewFaseActividadUsuarioUsuario">
+    <Type Name="GACC_ViewFaseActividadUsuarioUsuario">
+      <Column Name="gacc_ActId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombres_Completos" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_MetNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Metodologia" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_PerUsuarioNombre" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_FasNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Fase" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_ActNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Actividad" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_ActEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewFaseActividadUsuarioUsuario2" Member="GACC_ViewFaseActividadUsuarioUsuario2">
+    <Type Name="GACC_ViewFaseActividadUsuarioUsuario2">
+      <Column Name="gacc_ActId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombres_Completos" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_MetNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Metodologia" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_FasNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Fase" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_PerUsuarioNombre" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ActNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Actividad" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_ActEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewMetodologiaFase" Member="GACC_ViewMetodologiaFase">
+    <Type Name="GACC_ViewMetodologiaFase">
+      <Column Name="gacc_FasId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombres_Completos" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_MetNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Metodologia" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_FasNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Fase" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_PerEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_FasEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewMetodologiaFase2" Member="GACC_ViewMetodologiaFase2">
+    <Type Name="GACC_ViewMetodologiaFase2">
+      <Column Name="gacc_EmpId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CodEmpId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CodPerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombres_Completos" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_MetId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_MetNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_MetEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_FasId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_FasNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_FasEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CodCarId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewMetodologiaFaseUsuario" Member="GACC_ViewMetodologiaFaseUsuario">
+    <Type Name="GACC_ViewMetodologiaFaseUsuario">
+      <Column Name="gacc_FasId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombres_Completos" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_MetNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Metodologia" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_PerUsuarioNombre" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_FasNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Fase" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_FasEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewMetodologiaFaseUsuario2" Member="GACC_ViewMetodologiaFaseUsuario2">
+    <Type Name="GACC_ViewMetodologiaFaseUsuario2">
+      <Column Name="gacc_FasId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombres_Completos" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_MetNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Metodologia" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_FasNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado_Fase" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_PerUsuarioNombre" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_FasEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewMetodologiaPersonaNombreProy" Member="GACC_ViewMetodologiaPersonaNombreProy">
+    <Type Name="GACC_ViewMetodologiaPersonaNombreProy">
+      <Column Name="gacc_MetId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombres_Completos" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_MetNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_PerEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_MetEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewMetodologiaPersonaNombreProy2" Member="GACC_ViewMetodologiaPersonaNombreProy2">
+    <Type Name="GACC_ViewMetodologiaPersonaNombreProy2">
+      <Column Name="gacc_EmpId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CodEmpId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CodPerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombres_Completos" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_MetId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_MetNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_MetEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_PerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CodCarId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CarId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CarNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewMetodologiaPersonaNombreProy3" Member="GACC_ViewMetodologiaPersonaNombreProy3">
+    <Type Name="GACC_ViewMetodologiaPersonaNombreProy3">
+      <Column Name="gacc_MetId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombres_Completos" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_MetNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_MetEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerUsuarioNombre" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewMetodologiaPersonaUsuario" Member="GACC_ViewMetodologiaPersonaUsuario">
+    <Type Name="GACC_ViewMetodologiaPersonaUsuario">
+      <Column Name="gacc_MetId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombres_Completos" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_MetNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Encargado" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_PerUsuarioNombre" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_MetEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewNombreProyectoEmpresa" Member="GACC_ViewNombreProyectoEmpresa">
+    <Type Name="GACC_ViewNombreProyectoEmpresa">
+      <Column Name="gacc_NompId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CodEmpId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CodPerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpRuc" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpDireccion" Type="System.String" DbType="VarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpTelefono" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpCorreo" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombres_Completos" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_CarNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CarId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewNombreProyectoEmpresaUsuario" Member="GACC_ViewNombreProyectoEmpresaUsuario">
+    <Type Name="GACC_ViewNombreProyectoEmpresaUsuario">
+      <Column Name="gacc_NompId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerUsuarioNombre" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewNombreProyectoListar" Member="GACC_ViewNombreProyectoListar">
+    <Type Name="GACC_ViewNombreProyectoListar">
+      <Column Name="gacc_NompId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombres_Completos" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_CarId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewPersona" Member="GACC_ViewPersona">
+    <Type Name="GACC_ViewPersona">
+      <Column Name="gacc_PerId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="gacc_PerUsuarioNombre" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerPassword" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerDni" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombres_Completos" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_PerGenero" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CodCarId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CodEmpId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerEspecialidad" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerExperiencia" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerSalario" Type="System.Decimal" DbType="Decimal(8,2) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerDireccion" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerTelefono" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerCorreo" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewPersonaCargoEmpresa" Member="GACC_ViewPersonaCargoEmpresa">
+    <Type Name="GACC_ViewPersonaCargoEmpresa">
+      <Column Name="gacc_PerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerUsuarioNombre" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerPassword" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerDni" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombres_Completos" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_PerGenero" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CarNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerEspecialidad" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerExperiencia" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerSalario" Type="System.Decimal" DbType="Decimal(8,2) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerDireccion" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerTelefono" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerCorreo" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewPersonaCargoEmpresa2" Member="GACC_ViewPersonaCargoEmpresa2">
+    <Type Name="GACC_ViewPersonaCargoEmpresa2">
+      <Column Name="gacc_PerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerUsuarioNombre" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerPassword" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerDni" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombres_Completos" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_PerGenero" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerEspecialidad" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerExperiencia" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerSalario" Type="System.Decimal" DbType="Decimal(8,2) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerDireccion" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerTelefono" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerCorreo" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpRuc" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpDireccion" Type="System.String" DbType="VarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpTelefono" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpCorreo" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CarId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CarNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CarEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewPersonaProyecto" Member="GACC_ViewPersonaProyecto">
+    <Type Name="GACC_ViewPersonaProyecto">
+      <Column Name="gacc_ProPerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(203)" CanBeNull="true" />
+      <Column Name="gacc_CarNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerSalario" Type="System.Decimal" DbType="Decimal(8,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Empresa_Trabajando" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewProyectoCosto" Member="GACC_ViewProyectoCosto">
+    <Type Name="GACC_ViewProyectoCosto">
+      <Column Name="gacc_ProCostId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CostId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CostNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CostValor" Type="System.Decimal" DbType="Decimal(8,2) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CostEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewTablaProyecto" Member="GACC_ViewTablaProyecto">
+    <Type Name="GACC_ViewTablaProyecto">
+      <Column Name="gacc_ProId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProLineasCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProLineaCodigoExistente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProLenguaje" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProGestorBaseDatos" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProTipoProyecto" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProModeloProyecto" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProEsfuerzoNominal" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProEsfuerzoAjustado" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProTiempo" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProFechaInicio" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProFechaFin" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProCostoTrabajadores" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="gacc_ProCostoCostoIndirectos" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="gacc_ProCostoTotal" Type="System.Decimal" DbType="Decimal(20,2)" CanBeNull="true" />
+      <Column Name="gacc_ProNumeroPersonas" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewTablaProyecto2" Member="GACC_ViewTablaProyecto2">
+    <Type Name="GACC_ViewTablaProyecto2">
+      <Column Name="gacc_ProId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProLineasCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProLineaCodigoExistente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProLenguaje" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProGestorBaseDatos" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProTipoProyecto" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProModeloProyecto" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProEsfuerzoNominal" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProEsfuerzoAjustado" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProTiempo" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProFechaInicio" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProFechaFin" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProCostoTrabajadores" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="gacc_ProCostoCostoIndirectos" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="gacc_ProCostoTotal" Type="System.Decimal" DbType="Decimal(20,2)" CanBeNull="true" />
+      <Column Name="gacc_ProNumeroPersonas" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GACC_ViewTablaProyecto3" Member="GACC_ViewTablaProyecto3">
+    <Type Name="GACC_ViewTablaProyecto3">
+      <Column Name="gacc_ProId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_EmpNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_NompNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_CodPerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_PerUsuarioNombre" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProLineasCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProLineaCodigoExistente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProLenguaje" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProGestorBaseDatos" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProTipoProyecto" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProModeloProyecto" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProEsfuerzoNominal" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProEsfuerzoAjustado" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProTiempo" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProFechaInicio" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProFechaFin" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProCostoTrabajadores" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="gacc_ProCostoCostoIndirectos" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="gacc_ProCostoTotal" Type="System.Decimal" DbType="Decimal(20,2)" CanBeNull="true" />
+      <Column Name="gacc_ProNumeroPersonas" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="gacc_ProEstado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,198 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="GACC_LiderProyectoInsertarNombreProyecto.master.cs" Inherits="GACC_Vista.GACC_LiderProyectoInsertarNombreProyecto" %>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+  <meta name="author" content="GeeksLabs">
+  <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+  <link rel="shortcut icon" href="img/favicon.png">
+
+  <title>Complexivo GACC - Estimacion de Costo</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="Plantillas/administrador/css/bootstrap.min.css" rel="stylesheet">
+  <!-- bootstrap theme -->
+  <link href="Plantillas/administrador/css/bootstrap-theme.css" rel="stylesheet">
+  <!--external css-->
+  <!-- font icon -->
+  <link href="Plantillas/administrador/css/elegant-icons-style.css" rel="stylesheet" />
+  <link href="Plantillas/administrador/css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Custom styles -->
+  <link href="Plantillas/administrador/css/style.css" rel="stylesheet">
+  <link href="Plantillas/administrador/css/style-responsive.css" rel="stylesheet" />
+
+  
+     <asp:ContentPlaceHolder ID="gacc_cphhead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <form runat="server">
+  <!-- container section start -->
+  <section id="container" class="">
+    <!--header start-->
+
+    <header class="header dark-bg">
+      <div class="toggle-nav">
+        <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+      </div>
+
+      <!--logo start-->
+      <a href="Administrador.aspx" class="logo">G@ <span class="lite">CC</span></a>
+      <!--logo end-->
+
+
+      <div class="top-nav notification-row">
+        <!-- notificatoin dropdown start-->
+        <ul class="nav pull-right top-menu">
+
+          <!-- user login dropdown start-->
+          <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="profile-ava">
+                                <img alt="" src="Plantillas/administrador/img/face.png">
+                            </span>
+                            <span class="username">
+                                <asp:ContentPlaceHolder ID="gacc_cph1" runat="server"></asp:ContentPlaceHolder>
+                            </span>
+                            <b class="caret"></b>
+                        </a>
+             <ul class="dropdown-menu extended logout">
+              <div class="log-arrow-up"></div>
+               <li class="eborder-top">
+                    <asp:ContentPlaceHolder ID="gacc_cph4" runat="server"></asp:ContentPlaceHolder>
+              </li>
+             <li>
+                 <asp:ContentPlaceHolder ID="gacc_cph2" runat="server"></asp:ContentPlaceHolder>
+              </li>
+              
+            </ul>
+          </li>
+          <!-- user login dropdown end -->
+        </ul>
+        <!-- notificatoin dropdown end-->
+      </div>
+    </header>
+    <!--header end-->
+
+   <!--sidebar start-->
+    <aside>
+      <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu">
+          <li class="">
+            <a class="" href="GACC_LiderProyecto.aspx">
+                          <i class="fa fa-home"></i>
+                          <span>Home</span>
+                      </a>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;" class="">
+                          <i class="icon_table"></i>
+                          <span>Mantenimiento</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+            <ul class="sub">
+               <li><a class="" href="GACC_LiderProyectoListarNombreProyecto.aspx">Nombre Proyecto</a></li>
+              <li><a class="" href="GACC_LiderProyectoListarMetodologia.aspx">Metodologia</a></li>
+              <li><a class="" href="GACC_LiderProyectoListarFaseDeDesarrollo.aspx">Fase de Desarrollo</a></li>
+              <li><a class="" href="GACC_LiderProyectoListarActividad.aspx">Actividad</a></li>
+              <li><a class="" href="GACC_LiderProyectoListarTarea.aspx">Tarea</a></li>
+              <li><a class="" href="GACC_LiderProyectoListarCostosIndirecto.aspx">Costo Indirecto</a></li>
+              <li><a class="" href="GACC_LiderProyectoListarProyectoCosto.aspx">Proyecto-Costo </a></li>
+              <li><a class="" href="GACC_LiderProyectoListarProyectoPersona.aspx">Proyecto-Persona</a></li>
+              <li><a class="" href="GACC_LiderProyectoListarProyecto.aspx">Proyecto</a></li>
+            </ul>
+          </li>
+             <li>
+                 <a href="GACC_LiderProyectoLineasCodigo.aspx" class="">
+                       <i class="fa fa-sort-numeric-desc" aria-hidden="true"></i>
+                          <span>Lineas de Código</span>
+                      </a>
+          </li>
+            <li>
+                 <a href="GACC_LiderProyectoInsertarProyecto.aspx" class="">
+                         <i class="fa fa-money" aria-hidden="true"></i>
+                          <span>Costeo</span>
+                      </a>
+          </li>
+            <li class="sub-menu ">
+            <a href="javascript:;" class="">
+                          <i class="icon_documents_alt"></i>
+                          <span>Repotes</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+            <ul class="sub">
+              <li><a class="" href="GACC_LiderProyectoReporteProyectoGeneral.aspx">General</a></li>
+              <li><a class="" href="GACC_LiderProyectoReporteProyectoEspecifico.aspx"><span>Especifico</span></a></li>
+              <li><a class="" href="GACC_LiderProyectoReporteProyectoEstadistico.aspx"><span>Estadistico</span></a></li>
+              <li><a class="" href="GACC_LiderProyectoReporteProyecto.aspx"><span>Proyecto</span></a></li>
+            </ul>
+          </li>
+             <li class="">
+            <a class="" href="GACC_LiderProyectoInformacionCOCOMO.aspx">
+                          <i class="fa fa-info-circle" aria-hidden="true"></i>
+                          <span> COCOMO</span>
+                      </a>
+          </li>
+            </ul>
+                  <!-- sidebar menu end-->
+      </div>
+    </aside>
+    <!--sidebar end-->
+    <!--main content start-->
+    <section id="main-content">
+      <section class="wrapper">
+        <div class="row">
+          <div class="col-lg-12">
+            <h3 class="page-header"><i class="fa fa-file-text"t"></i> Nombre Proyecto</h3>
+            <ol class="breadcrumb">
+              <li><i class="fa fa-file-text""></i>Nombre Proyecto</li>
+            </ol>
+          </div>
+        </div>
+        <!-- page start-->
+          <div class="row">
+          <div class="col-md-12">
+            <section class="panel">
+              <header class="panel-heading">
+                <h3>Nombre Proyecto</h3>
+
+              </header>
+              <div class="panel-body">
+                <asp:ContentPlaceHolder ID="gacc_cph3" runat="server"></asp:ContentPlaceHolder>
+              </div>
+            </section>
+          </div>
+        </div>
+          
+        <!-- page end-->
+      </section>
+    </section>
+    <!--main content end-->
+    <div class="text-right">
+      <div class="credits" >     <center>     
+          Realizado por <b>Gabriel Alexander Cadena Cousin "GACC"</b></center>
+        </div>
+    </div>
+  </section>
+  <!-- container section end -->
+  <!-- javascripts -->
+  <script src="Plantillas/administrador/js/jquery.js"></script>
+  <script src="Plantillas/administrador/js/bootstrap.min.js"></script>
+  <!-- nice scroll -->
+  <script src="Plantillas/administrador/js/jquery.scrollTo.min.js"></script>
+  <script src="Plantillas/administrador/js/jquery.nicescroll.js" type="text/javascript"></script>
+  <!--custome script for all page-->
+  <script src="Plantillas/administrador/js/scripts.js"></script>
+       </form>
+</body>
+
+</html>
+

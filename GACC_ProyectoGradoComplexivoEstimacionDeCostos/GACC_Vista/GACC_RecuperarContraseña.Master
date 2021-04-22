@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="GACC_RecuperarContraseña.master.cs" Inherits="GACC_Vista.GACC_RecuperarContraseña" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Complexivo GACC - Estimacion de Costo</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="Plantillas/clave/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Plantillas/clave/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Plantillas/clave/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--==============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Plantillas/clave/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Plantillas/clave/vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="Plantillas/clave/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Plantillas/clave/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Plantillas/clave/vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="Plantillas/clave/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Plantillas/clave/css/util.css">
+	<link rel="stylesheet" type="text/css" href="Plantillas/clave/css/main.css">
+<!--===============================================================================================-->
+         <asp:ContentPlaceHolder ID="gacc_cphhead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+	<form runat="server" id="gacc_frm1">
+        <asp:ScriptManager ID="gacc_stm1" runat="server"></asp:ScriptManager>
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55">
+				<form class="login100-form validate-form flex-sb flex-w">
+					<span class="login100-form-title p-b-70"><center>
+						Recuperar Contraseña
+					</center></span>
+                    <span class="txt1 p-b-11">
+						<asp:ContentPlaceHolder ID="gacc_cph1" runat="server">
+            </asp:ContentPlaceHolder>
+					</span>
+		
+                    
+					<div class="wrap-input100 validate-input m-b-36" data-validate = "Username is required">
+                 
+						 <asp:ContentPlaceHolder ID="gacc_cph2" runat="server">
+            </asp:ContentPlaceHolder>
+						<span class="focus-input100"></span>
+					</div>
+					
+                    <div class="flex-sb-m w-full p-b-48">
+						<div>
+							<a href="GACC_Index.aspx" class="txt3">
+								Regresar
+							</a>
+						</div>
+					</div>
+
+					<div class="container-login100-form-btn">
+						 <asp:ContentPlaceHolder ID="gacc_cph3" runat="server">
+            </asp:ContentPlaceHolder>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="Plantillas/clave/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="Plantillas/clave/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="Plantillas/clave/vendor/bootstrap/js/popper.js"></script>
+	<script src="Plantillas/clave/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="Plantillas/clave/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="Plantillas/clave/vendor/daterangepicker/moment.min.js"></script>
+	<script src="Plantillas/clave/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="Plantillas/clave/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="Plantillas/clave/js/main.js"></script>
+        </form>
+</body>
+</html>
+

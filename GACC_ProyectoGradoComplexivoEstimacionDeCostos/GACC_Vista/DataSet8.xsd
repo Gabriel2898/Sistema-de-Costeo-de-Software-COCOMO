@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet8" targetNamespace="http://tempuri.org/DataSet8.xsd" xmlns:mstns="http://tempuri.org/DataSet8.xsd" xmlns="http://tempuri.org/DataSet8.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="GACC_ComplexivoEstimacionDeCostosConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GACC_ComplexivoEstimacionDeCostosConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.GACC_ComplexivoEstimacionDeCostosConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GACC_ViewActividadTareaTableAdapter" GeneratorDataComponentClassName="GACC_ViewActividadTareaTableAdapter" Name="GACC_ViewActividadTarea" UserDataComponentName="GACC_ViewActividadTareaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="GACC_ComplexivoEstimacionDeCostosConnectionString (Web.config)" DbObjectName="GACC_ComplexivoEstimacionDeCostos.dbo.GACC_ViewActividadTarea" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT gacc_TarId, gacc_EmpNombre, gacc_NompNombre, Nombres_Completos, gacc_MetNombre, Encargado_Metodologia, gacc_FasNombre, Encargado_Fase, gacc_ActNombre, Encargado_Actividad, gacc_TarNombre, gacc_TarLineaCodigo, Encargado_Tarea, gacc_PerEstado, gacc_TarFechaInicio, gacc_TarFechaFin, gacc_TarEstado FROM dbo.GACC_ViewActividadTarea</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="gacc_TarId" DataSetColumn="gacc_TarId" />
+              <Mapping SourceColumn="gacc_EmpNombre" DataSetColumn="gacc_EmpNombre" />
+              <Mapping SourceColumn="gacc_NompNombre" DataSetColumn="gacc_NompNombre" />
+              <Mapping SourceColumn="Nombres_Completos" DataSetColumn="Nombres_Completos" />
+              <Mapping SourceColumn="gacc_MetNombre" DataSetColumn="gacc_MetNombre" />
+              <Mapping SourceColumn="Encargado_Metodologia" DataSetColumn="Encargado_Metodologia" />
+              <Mapping SourceColumn="gacc_FasNombre" DataSetColumn="gacc_FasNombre" />
+              <Mapping SourceColumn="Encargado_Fase" DataSetColumn="Encargado_Fase" />
+              <Mapping SourceColumn="gacc_ActNombre" DataSetColumn="gacc_ActNombre" />
+              <Mapping SourceColumn="Encargado_Actividad" DataSetColumn="Encargado_Actividad" />
+              <Mapping SourceColumn="gacc_TarNombre" DataSetColumn="gacc_TarNombre" />
+              <Mapping SourceColumn="gacc_TarLineaCodigo" DataSetColumn="gacc_TarLineaCodigo" />
+              <Mapping SourceColumn="Encargado_Tarea" DataSetColumn="Encargado_Tarea" />
+              <Mapping SourceColumn="gacc_PerEstado" DataSetColumn="gacc_PerEstado" />
+              <Mapping SourceColumn="gacc_TarFechaInicio" DataSetColumn="gacc_TarFechaInicio" />
+              <Mapping SourceColumn="gacc_TarFechaFin" DataSetColumn="gacc_TarFechaFin" />
+              <Mapping SourceColumn="gacc_TarEstado" DataSetColumn="gacc_TarEstado" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GACC_ViewFaseActividadTableAdapter" GeneratorDataComponentClassName="GACC_ViewFaseActividadTableAdapter" Name="GACC_ViewFaseActividad" UserDataComponentName="GACC_ViewFaseActividadTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="GACC_ComplexivoEstimacionDeCostosConnectionString (Web.config)" DbObjectName="GACC_ComplexivoEstimacionDeCostos.dbo.GACC_ViewFaseActividad" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT gacc_ActId, gacc_EmpNombre, gacc_NompNombre, Nombres_Completos, gacc_MetNombre, Encargado_Metodologia, gacc_FasNombre, Encargado_Fase, gacc_ActNombre, Encargado_Actividad, gacc_PerEstado, gacc_ActEstado FROM dbo.GACC_ViewFaseActividad</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="gacc_ActId" DataSetColumn="gacc_ActId" />
+              <Mapping SourceColumn="gacc_EmpNombre" DataSetColumn="gacc_EmpNombre" />
+              <Mapping SourceColumn="gacc_NompNombre" DataSetColumn="gacc_NompNombre" />
+              <Mapping SourceColumn="Nombres_Completos" DataSetColumn="Nombres_Completos" />
+              <Mapping SourceColumn="gacc_MetNombre" DataSetColumn="gacc_MetNombre" />
+              <Mapping SourceColumn="Encargado_Metodologia" DataSetColumn="Encargado_Metodologia" />
+              <Mapping SourceColumn="gacc_FasNombre" DataSetColumn="gacc_FasNombre" />
+              <Mapping SourceColumn="Encargado_Fase" DataSetColumn="Encargado_Fase" />
+              <Mapping SourceColumn="gacc_ActNombre" DataSetColumn="gacc_ActNombre" />
+              <Mapping SourceColumn="Encargado_Actividad" DataSetColumn="Encargado_Actividad" />
+              <Mapping SourceColumn="gacc_PerEstado" DataSetColumn="gacc_PerEstado" />
+              <Mapping SourceColumn="gacc_ActEstado" DataSetColumn="gacc_ActEstado" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GACC_ViewMetodologiaFaseTableAdapter" GeneratorDataComponentClassName="GACC_ViewMetodologiaFaseTableAdapter" Name="GACC_ViewMetodologiaFase" UserDataComponentName="GACC_ViewMetodologiaFaseTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="GACC_ComplexivoEstimacionDeCostosConnectionString (Web.config)" DbObjectName="GACC_ComplexivoEstimacionDeCostos.dbo.GACC_ViewMetodologiaFase" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT gacc_FasId, gacc_EmpNombre, gacc_NompNombre, Nombres_Completos, gacc_MetNombre, Encargado_Metodologia, gacc_FasNombre, Encargado_Fase, gacc_PerEstado, gacc_FasEstado FROM dbo.GACC_ViewMetodologiaFase</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="gacc_FasId" DataSetColumn="gacc_FasId" />
+              <Mapping SourceColumn="gacc_EmpNombre" DataSetColumn="gacc_EmpNombre" />
+              <Mapping SourceColumn="gacc_NompNombre" DataSetColumn="gacc_NompNombre" />
+              <Mapping SourceColumn="Nombres_Completos" DataSetColumn="Nombres_Completos" />
+              <Mapping SourceColumn="gacc_MetNombre" DataSetColumn="gacc_MetNombre" />
+              <Mapping SourceColumn="Encargado_Metodologia" DataSetColumn="Encargado_Metodologia" />
+              <Mapping SourceColumn="gacc_FasNombre" DataSetColumn="gacc_FasNombre" />
+              <Mapping SourceColumn="Encargado_Fase" DataSetColumn="Encargado_Fase" />
+              <Mapping SourceColumn="gacc_PerEstado" DataSetColumn="gacc_PerEstado" />
+              <Mapping SourceColumn="gacc_FasEstado" DataSetColumn="gacc_FasEstado" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GACC_ViewMetodologiaPersonaNombreProyTableAdapter" GeneratorDataComponentClassName="GACC_ViewMetodologiaPersonaNombreProyTableAdapter" Name="GACC_ViewMetodologiaPersonaNombreProy" UserDataComponentName="GACC_ViewMetodologiaPersonaNombreProyTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="GACC_ComplexivoEstimacionDeCostosConnectionString (Web.config)" DbObjectName="GACC_ComplexivoEstimacionDeCostos.dbo.GACC_ViewMetodologiaPersonaNombreProy" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT gacc_MetId, gacc_EmpNombre, gacc_NompNombre, Nombres_Completos, gacc_MetNombre, Encargado, gacc_PerEstado, gacc_MetEstado FROM dbo.GACC_ViewMetodologiaPersonaNombreProy</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="gacc_MetId" DataSetColumn="gacc_MetId" />
+              <Mapping SourceColumn="gacc_EmpNombre" DataSetColumn="gacc_EmpNombre" />
+              <Mapping SourceColumn="gacc_NompNombre" DataSetColumn="gacc_NompNombre" />
+              <Mapping SourceColumn="Nombres_Completos" DataSetColumn="Nombres_Completos" />
+              <Mapping SourceColumn="gacc_MetNombre" DataSetColumn="gacc_MetNombre" />
+              <Mapping SourceColumn="Encargado" DataSetColumn="Encargado" />
+              <Mapping SourceColumn="gacc_PerEstado" DataSetColumn="gacc_PerEstado" />
+              <Mapping SourceColumn="gacc_MetEstado" DataSetColumn="gacc_MetEstado" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet8" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet8" msprop:Generator_UserDSName="DataSet8">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GACC_ViewActividadTarea" msprop:Generator_TableClassName="GACC_ViewActividadTareaDataTable" msprop:Generator_TableVarName="tableGACC_ViewActividadTarea" msprop:Generator_TablePropName="GACC_ViewActividadTarea" msprop:Generator_RowDeletingName="GACC_ViewActividadTareaRowDeleting" msprop:Generator_RowChangingName="GACC_ViewActividadTareaRowChanging" msprop:Generator_RowEvHandlerName="GACC_ViewActividadTareaRowChangeEventHandler" msprop:Generator_RowDeletedName="GACC_ViewActividadTareaRowDeleted" msprop:Generator_UserTableName="GACC_ViewActividadTarea" msprop:Generator_RowChangedName="GACC_ViewActividadTareaRowChanged" msprop:Generator_RowEvArgName="GACC_ViewActividadTareaRowChangeEvent" msprop:Generator_RowClassName="GACC_ViewActividadTareaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="gacc_TarId" msprop:Generator_ColumnVarNameInTable="columngacc_TarId" msprop:Generator_ColumnPropNameInRow="gacc_TarId" msprop:Generator_ColumnPropNameInTable="gacc_TarIdColumn" msprop:Generator_UserColumnName="gacc_TarId" type="xs:int" />
+              <xs:element name="gacc_EmpNombre" msprop:Generator_ColumnVarNameInTable="columngacc_EmpNombre" msprop:Generator_ColumnPropNameInRow="gacc_EmpNombre" msprop:Generator_ColumnPropNameInTable="gacc_EmpNombreColumn" msprop:Generator_UserColumnName="gacc_EmpNombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="gacc_NompNombre" msprop:Generator_ColumnVarNameInTable="columngacc_NompNombre" msprop:Generator_ColumnPropNameInRow="gacc_NompNombre" msprop:Generator_ColumnPropNameInTable="gacc_NompNombreColumn" msprop:Generator_UserColumnName="gacc_NompNombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombres_Completos" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNombres_Completos" msprop:Generator_ColumnPropNameInRow="Nombres_Completos" msprop:Generator_ColumnPropNameInTable="Nombres_CompletosColumn" msprop:Generator_UserColumnName="Nombres_Completos" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="203" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="gacc_MetNombre" msprop:Generator_ColumnVarNameInTable="columngacc_MetNombre" msprop:Generator_ColumnPropNameInRow="gacc_MetNombre" msprop:Generator_ColumnPropNameInTable="gacc_MetNombreColumn" msprop:Generator_UserColumnName="gacc_MetNombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Encargado_Metodologia" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEncargado_Metodologia" msprop:Generator_ColumnPropNameInRow="Encargado_Metodologia" msprop:Generator_ColumnPropNameInTable="Encargado_MetodologiaColumn" msprop:Generator_UserColumnName="Encargado_Metodologia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="203" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="gacc_FasNombre" msprop:Generator_ColumnVarNameInTable="columngacc_FasNombre" msprop:Generator_ColumnPropNameInRow="gacc_FasNombre" msprop:Generator_ColumnPropNameInTable="gacc_FasNombreColumn" msprop:Generator_UserColumnName="gacc_FasNombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Encargado_Fase" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEncargado_Fase" msprop:Generator_ColumnPropNameInRow="Encargado_Fase" msprop:Generator_ColumnPropNameInTable="Encargado_FaseColumn" msprop:Generator_UserColumnName="Encargado_Fase" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="203" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="gacc_ActNombre" msprop:Generator_ColumnVarNameInTable="columngacc_ActNombre" msprop:Generator_ColumnPropNameInRow="gacc_ActNombre" msprop:Generator_ColumnPropNameInTable="gacc_ActNombreColumn" msprop:Generator_UserColumnName="gacc_ActNombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Encargado_Actividad" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEncargado_Actividad" msprop:Generator_ColumnPropNameInRow="Encargado_Actividad" msprop:Generator_ColumnPropNameInTable="Encargado_ActividadColumn" msprop:Generator_UserColumnName="Encargado_Actividad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="203" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="gacc_TarNombre" msprop:Generator_ColumnVarNameInTable="columngacc_TarNombre" msprop:Generator_ColumnPropNameInRow="gacc_TarNombre" msprop:Generator_ColumnPropNameInTable="gacc_TarNombreColumn" msprop:Generator_UserColumnName="gacc_TarNombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="gacc_TarLineaCodigo" msprop:Generator_ColumnVarNameInTable="columngacc_TarLineaCodigo" msprop:Generator_ColumnPropNameInRow="gacc_TarLineaCodigo" msprop:Generator_ColumnPropNameInTable="gacc_TarLineaCodigoColumn" msprop:Generator_UserColumnName="gacc_TarLineaCodigo" type="xs:int" />
+              <xs:element name="Encargado_Tarea" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEncargado_Tarea" msprop:Generator_ColumnPropNameInRow="Encargado_Tarea" msprop:Generator_ColumnPropNameInTable="Encargado_TareaColumn" msprop:Generator_UserColumnName="Encargado_Tarea" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="203" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="gacc_PerEstado" msprop:Generator_ColumnVarNameInTable="columngacc_PerEstado" msprop:Generator_ColumnPropNameInRow="gacc_PerEstado" msprop:Generator_ColumnPropNameInTable="gacc_PerEstadoColumn" msprop:Generator_UserColumnName="gacc_PerEstado">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="gacc_TarFechaInicio" msprop:Generator_ColumnVarNameInTable="columngacc_TarFechaInicio" msprop:Generator_ColumnPropNameInRow="gacc_TarFechaInicio" msprop:Generator_ColumnPropNameInTable="gacc_TarFechaInicioColumn" msprop:Generator_UserColumnName="gacc_TarFechaInicio" type="xs:dateTime" />
+              <xs:element name="gacc_TarFechaFin" msprop:Generator_ColumnVarNameInTable="columngacc_TarFechaFin" msprop:Generator_ColumnPropNameInRow="gacc_TarFechaFin" msprop:Generator_ColumnPropNameInTable="gacc_TarFechaFinColumn" msprop:Generator_UserColumnName="gacc_TarFechaFin" type="xs:dateTime" />
+              <xs:element name="gacc_TarEstado" msprop:Generator_ColumnVarNameInTable="columngacc_TarEstado" msprop:Generator_ColumnPropNameInRow="gacc_TarEstado" msprop:Generator_ColumnPropNameInTable="gacc_TarEstadoColumn" msprop:Generator_UserColumnName="gacc_TarEstado">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GACC_ViewFaseActividad" msprop:Generator_TableClassName="GACC_ViewFaseActividadDataTable" msprop:Generator_TableVarName="tableGACC_ViewFaseActividad" msprop:Generator_TablePropName="GACC_ViewFaseActividad" msprop:Generator_RowDeletingName="GACC_ViewFaseActividadRowDeleting" msprop:Generator_RowChangingName="GACC_ViewFaseActividadRowChanging" msprop:Generator_RowEvHandlerName="GACC_ViewFaseActividadRowChangeEventHandler" msprop:Generator_RowDeletedName="GACC_ViewFaseActividadRowDeleted" msprop:Generator_UserTableName="GACC_ViewFaseActividad" msprop:Generator_RowChangedName="GACC_ViewFaseActividadRowChanged" msprop:Generator_RowEvArgName="GACC_ViewFaseActividadRowChangeEvent" msprop:Generator_RowClassName="GACC_ViewFaseActividadRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="gacc_ActId" msprop:Generator_ColumnVarNameInTable="columngacc_ActId" msprop:Generator_ColumnPropNameInRow="gacc_ActId" msprop:Generator_ColumnPropNameInTable="gacc_ActIdColumn" msprop:Generator_UserColumnName="gacc_ActId" type="xs:int" />
+              <xs:element name="gacc_EmpNombre" msprop:Generator_ColumnVarNameInTable="columngacc_EmpNombre" msprop:Generator_ColumnPropNameInRow="gacc_EmpNombre" msprop:Generator_ColumnPropNameInTable="gacc_EmpNombreColumn" msprop:Generator_UserColumnName="gacc_EmpNombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="gacc_NompNombre" msprop:Generator_ColumnVarNameInTable="columngacc_NompNombre" msprop:Generator_ColumnPropNameInRow="gacc_NompNombre" msprop:Generator_ColumnPropNameInTable="gacc_NompNombreColumn" msprop:Generator_UserColumnName="gacc_NompNombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombres_Completos" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNombres_Completos" msprop:Generator_ColumnPropNameInRow="Nombres_Completos" msprop:Generator_ColumnPropNameInTable="Nombres_CompletosColumn" msprop:Generator_UserColumnName="Nombres_Completos" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="203" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="gacc_MetNombre" msprop:Generator_ColumnVarNameInTable="columngacc_MetNombre" msprop:Generator_ColumnPropNameInRow="gacc_MetNombre" msprop:Generator_ColumnPropNameInTable="gacc_MetNombreColumn" msprop:Generator_UserColumnName="gacc_MetNombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Encargado_Metodologia" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEncargado_Metodologia" msprop:Generator_ColumnPropNameInRow="Encargado_Metodologia" msprop:Generator_ColumnPropNameInTable="Encargado_MetodologiaColumn" msprop:Generator_UserColumnName="Encargado_Metodologia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="203" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="gacc_FasNombre" msprop:Generator_ColumnVarNameInTable="columngacc_FasNombre" msprop:Generator_ColumnPropNameInRow="gacc_FasNombre" msprop:Generator_ColumnPropNameInTable="gacc_FasNombreColumn" msprop:Generator_UserColumnName="gacc_FasNombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Encargado_Fase" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEncargado_Fase" msprop:Generator_ColumnPropNameInRow="Encargado_Fase" msprop:Generator_ColumnPropNameInTable="Encargado_FaseColumn" msprop:Generator_UserColumnName="Encargado_Fase" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="203" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="gacc_ActNombre" msprop:Generator_ColumnVarNameInTable="columngacc_ActNombre" msprop:Generator_ColumnPropNameInRow="gacc_ActNombre" msprop:Generator_ColumnPropNameInTable="gacc_ActNombreColumn" msprop:Generator_UserColumnName="gacc_ActNombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Encargado_Actividad" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEncargado_Actividad" msprop:Generator_ColumnPropNameInRow="Encargado_Actividad" msprop:Generator_ColumnPropNameInTable="Encargado_ActividadColumn" msprop:Generator_UserColumnName="Encargado_Actividad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="203" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="gacc_PerEstado" msprop:Generator_ColumnVarNameInTable="columngacc_PerEstado" msprop:Generator_ColumnPropNameInRow="gacc_PerEstado" msprop:Generator_ColumnPropNameInTable="gacc_PerEstadoColumn" msprop:Generator_UserColumnName="gacc_PerEstado">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="gacc_ActEstado" msprop:Generator_ColumnVarNameInTable="columngacc_ActEstado" msprop:Generator_ColumnPropNameInRow="gacc_ActEstado" msprop:Generator_ColumnPropNameInTable="gacc_ActEstadoColumn" msprop:Generator_UserColumnName="gacc_ActEstado">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GACC_ViewMetodologiaFase" msprop:Generator_TableClassName="GACC_ViewMetodologiaFaseDataTable" msprop:Generator_TableVarName="tableGACC_ViewMetodologiaFase" msprop:Generator_TablePropName="GACC_ViewMetodologiaFase" msprop:Generator_RowDeletingName="GACC_ViewMetodologiaFaseRowDeleting" msprop:Generator_RowChangingName="GACC_ViewMetodologiaFaseRowChanging" msprop:Generator_RowEvHandlerName="GACC_ViewMetodologiaFaseRowChangeEventHandler" msprop:Generator_RowDeletedName="GACC_ViewMetodologiaFaseRowDeleted" msprop:Generator_UserTableName="GACC_ViewMetodologiaFase" msprop:Generator_RowChangedName="GACC_ViewMetodologiaFaseRowChanged" msprop:Generator_RowEvArgName="GACC_ViewMetodologiaFaseRowChangeEvent" msprop:Generator_RowClassName="GACC_ViewMetodologiaFaseRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="gacc_FasId" msprop:Generator_ColumnVarNameInTable="columngacc_FasId" msprop:Generator_ColumnPropNameInRow="gacc_FasId" msprop:Generator_ColumnPropNameInTable="gacc_FasIdColumn" msprop:Generator_UserColumnName="gacc_FasId" type="xs:int" />
+              <xs:element name="gacc_EmpNombre" msprop:Generator_ColumnVarNameInTable="columngacc_EmpNombre" msprop:Generator_ColumnPropNameInRow="gacc_EmpNombre" msprop:Generator_ColumnPropNameInTable="gacc_EmpNombreColumn" msprop:Generator_UserColumnName="gacc_EmpNombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="gacc_NompNombre" msprop:Generator_ColumnVarNameInTable="columngacc_NompNombre" msprop:Generator_ColumnPropNameInRow="gacc_NompNombre" msprop:Generator_ColumnPropNameInTable="gacc_NompNombreColumn" msprop:Generator_UserColumnName="gacc_NompNombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombres_Completos" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNombres_Completos" msprop:Generator_ColumnPropNameInRow="Nombres_Completos" msprop:Generator_ColumnPropNameInTable="Nombres_CompletosColumn" msprop:Generator_UserColumnName="Nombres_Completos" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="203" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="gacc_MetNombre" msprop:Generator_ColumnVarNameInTable="columngacc_MetNombre" msprop:Generator_ColumnPropNameInRow="gacc_MetNombre" msprop:Generator_ColumnPropNameInTable="gacc_MetNombreColumn" msprop:Generator_UserColumnName="gacc_MetNombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Encargado_Metodologia" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEncargado_Metodologia" msprop:Generator_ColumnPropNameInRow="Encargado_Metodologia" msprop:Generator_ColumnPropNameInTable="Encargado_MetodologiaColumn" msprop:Generator_UserColumnName="Encargado_Metodologia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="203" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="gacc_FasNombre" msprop:Generator_ColumnVarNameInTable="columngacc_FasNombre" msprop:Generator_ColumnPropNameInRow="gacc_FasNombre" msprop:Generator_ColumnPropNameInTable="gacc_FasNombreColumn" msprop:Generator_UserColumnName="gacc_FasNombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Encargado_Fase" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEncargado_Fase" msprop:Generator_ColumnPropNameInRow="Encargado_Fase" msprop:Generator_ColumnPropNameInTable="Encargado_FaseColumn" msprop:Generator_UserColumnName="Encargado_Fase" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="203" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="gacc_PerEstado" msprop:Generator_ColumnVarNameInTable="columngacc_PerEstado" msprop:Generator_ColumnPropNameInRow="gacc_PerEstado" msprop:Generator_ColumnPropNameInTable="gacc_PerEstadoColumn" msprop:Generator_UserColumnName="gacc_PerEstado">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="gacc_FasEstado" msprop:Generator_ColumnVarNameInTable="columngacc_FasEstado" msprop:Generator_ColumnPropNameInRow="gacc_FasEstado" msprop:Generator_ColumnPropNameInTable="gacc_FasEstadoColumn" msprop:Generator_UserColumnName="gacc_FasEstado">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GACC_ViewMetodologiaPersonaNombreProy" msprop:Generator_TableClassName="GACC_ViewMetodologiaPersonaNombreProyDataTable" msprop:Generator_TableVarName="tableGACC_ViewMetodologiaPersonaNombreProy" msprop:Generator_TablePropName="GACC_ViewMetodologiaPersonaNombreProy" msprop:Generator_RowDeletingName="GACC_ViewMetodologiaPersonaNombreProyRowDeleting" msprop:Generator_RowChangingName="GACC_ViewMetodologiaPersonaNombreProyRowChanging" msprop:Generator_RowEvHandlerName="GACC_ViewMetodologiaPersonaNombreProyRowChangeEventHandler" msprop:Generator_RowDeletedName="GACC_ViewMetodologiaPersonaNombreProyRowDeleted" msprop:Generator_UserTableName="GACC_ViewMetodologiaPersonaNombreProy" msprop:Generator_RowChangedName="GACC_ViewMetodologiaPersonaNombreProyRowChanged" msprop:Generator_RowEvArgName="GACC_ViewMetodologiaPersonaNombreProyRowChangeEvent" msprop:Generator_RowClassName="GACC_ViewMetodologiaPersonaNombreProyRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="gacc_MetId" msprop:Generator_ColumnVarNameInTable="columngacc_MetId" msprop:Generator_ColumnPropNameInRow="gacc_MetId" msprop:Generator_ColumnPropNameInTable="gacc_MetIdColumn" msprop:Generator_UserColumnName="gacc_MetId" type="xs:int" />
+              <xs:element name="gacc_EmpNombre" msprop:Generator_ColumnVarNameInTable="columngacc_EmpNombre" msprop:Generator_ColumnPropNameInRow="gacc_EmpNombre" msprop:Generator_ColumnPropNameInTable="gacc_EmpNombreColumn" msprop:Generator_UserColumnName="gacc_EmpNombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="gacc_NompNombre" msprop:Generator_ColumnVarNameInTable="columngacc_NompNombre" msprop:Generator_ColumnPropNameInRow="gacc_NompNombre" msprop:Generator_ColumnPropNameInTable="gacc_NompNombreColumn" msprop:Generator_UserColumnName="gacc_NompNombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombres_Completos" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNombres_Completos" msprop:Generator_ColumnPropNameInRow="Nombres_Completos" msprop:Generator_ColumnPropNameInTable="Nombres_CompletosColumn" msprop:Generator_UserColumnName="Nombres_Completos" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="203" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="gacc_MetNombre" msprop:Generator_ColumnVarNameInTable="columngacc_MetNombre" msprop:Generator_ColumnPropNameInRow="gacc_MetNombre" msprop:Generator_ColumnPropNameInTable="gacc_MetNombreColumn" msprop:Generator_UserColumnName="gacc_MetNombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Encargado" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEncargado" msprop:Generator_ColumnPropNameInRow="Encargado" msprop:Generator_ColumnPropNameInTable="EncargadoColumn" msprop:Generator_UserColumnName="Encargado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="203" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="gacc_PerEstado" msprop:Generator_ColumnVarNameInTable="columngacc_PerEstado" msprop:Generator_ColumnPropNameInRow="gacc_PerEstado" msprop:Generator_ColumnPropNameInTable="gacc_PerEstadoColumn" msprop:Generator_UserColumnName="gacc_PerEstado">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="gacc_MetEstado" msprop:Generator_ColumnVarNameInTable="columngacc_MetEstado" msprop:Generator_ColumnPropNameInRow="gacc_MetEstado" msprop:Generator_ColumnPropNameInTable="gacc_MetEstadoColumn" msprop:Generator_UserColumnName="gacc_MetEstado">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GACC_ViewActividadTarea" />
+      <xs:field xpath="mstns:gacc_TarId" />
+    </xs:unique>
+    <xs:unique name="GACC_ViewFaseActividad_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GACC_ViewFaseActividad" />
+      <xs:field xpath="mstns:gacc_ActId" />
+    </xs:unique>
+    <xs:unique name="GACC_ViewMetodologiaFase_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GACC_ViewMetodologiaFase" />
+      <xs:field xpath="mstns:gacc_FasId" />
+    </xs:unique>
+    <xs:unique name="GACC_ViewMetodologiaPersonaNombreProy_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GACC_ViewMetodologiaPersonaNombreProy" />
+      <xs:field xpath="mstns:gacc_MetId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

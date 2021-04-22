@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{528B6359-56F4-4756-B8B8-650DC6B0FCB3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GACC_Controlador</RootNamespace>
+    <AssemblyName>GACC_Controlador</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GACC_ControladorActividad.cs" />
+    <Compile Include="GACC_ControladorCargo.cs" />
+    <Compile Include="GACC_ControladorCedulayRuc.cs" />
+    <Compile Include="GACC_ControladorCostoIndirecto.cs" />
+    <Compile Include="GACC_ControladorEmpresa.cs" />
+    <Compile Include="GACC_ControladorEncriptar.cs" />
+    <Compile Include="GACC_ControladorFaseDeDesarrollo.cs" />
+    <Compile Include="GACC_ControladorLogin.cs" />
+    <Compile Include="GACC_ControladorMetodologia.cs" />
+    <Compile Include="GACC_ControladorNombreProyecto.cs" />
+    <Compile Include="GACC_ControladorPersona.cs" />
+    <Compile Include="GACC_ControladorProyecto.cs" />
+    <Compile Include="GACC_ControladorProyectoCostoIndirecto.cs" />
+    <Compile Include="GACC_ControladorProyectoPersona.cs" />
+    <Compile Include="GACC_ControladorRecuperarClave.cs" />
+    <Compile Include="GACC_ControladorTarea.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GACC_Modelo\GACC_Modelo.csproj">
+      <Project>{696bb564-2ab6-4916-ab20-e46dc758a4f3}</Project>
+      <Name>GACC_Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
